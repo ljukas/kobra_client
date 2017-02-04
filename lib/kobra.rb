@@ -1,6 +1,6 @@
 #require "kobra/version"
 require "rest_client"
-require "json/pure"
+require "json/ext"
 
 module Kobra
   class Client
