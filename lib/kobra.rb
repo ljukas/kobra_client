@@ -75,7 +75,3 @@ module Kobra
     end
   end
 end
-
-# Example usage:
-kobra = Kobra::Client.new(:api_key => 'xxx')
-puts kobra.get_student(:id => "simme812", :union => true, :section => true)
