@@ -43,15 +43,21 @@ module Kobra
 
     # Helper function to get the union name
     def get_union(student)
-      union_id = student[:union].split('/').last
-      student[:union] = json_get("api/v1/unions/#{union_id}")[:name]
+      unless student[:union].nil?
+        union_id = student[:union].split('/').last
+        student[:union] = json_get("api/v1/unions/#{union_id}")[:name]
+      end
+
       return student
     end
 
     # Helper function to get the section name
     def get_section(student)
-      section_id = student[:section].split('/').last
-      student[:section] = json_get("api/v1/sections/#{section_id}")[:name]
+      unless student[:section].nil?
+        section_id = student[:section].split('/').last
+        student[:section] = json_get("api/v1/sections/#{section_id}")[:name]
+      end
+
       return student
     end
 
